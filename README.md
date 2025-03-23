@@ -1,4 +1,6 @@
-# Guide détaillé pour tester l'application
+# Question 3 - TP2
+
+L'objectif de cette question est de déployer sur DockerHub une image docker d'une application web.
 
 ## Test local de l'application
 
@@ -154,6 +156,24 @@ docker-compose up -d
 docker-compose ps
 ```
 
+## Qu'est-ce qu'un conteneur ?
+
+Un conteneur est une unité standardisée de logiciel qui regroupe le code et toutes ses dépendances, de sorte que l'application s'exécute rapidement et de manière fiable d'un environnement informatique à un autre. Les conteneurs permettent aux développeurs de créer, déployer et exécuter des applications de manière cohérente sur différents environnements, qu'ils soient locaux ou dans le cloud.
+
+## Importance des conteneurs
+
+Les conteneurs jouent un rôle crucial dans le développement et le déploiement modernes d'applications pour plusieurs raisons :
+
+1. **Portabilité** : Les conteneurs peuvent être exécutés sur n'importe quelle plateforme qui supporte le moteur de conteneurisation (comme Docker), ce qui facilite le déploiement d'applications sur différents environnements.
+
+2. **Isolation** : Chaque conteneur fonctionne comme un environnement isolé, ce qui signifie que les applications peuvent s'exécuter sans interférer les unes avec les autres. Cela améliore la sécurité et la stabilité des applications.
+
+3. **Efficacité des ressources** : Contrairement aux machines virtuelles, les conteneurs partagent le noyau du système d'exploitation, ce qui les rend plus légers et plus rapides à démarrer. Ils consomment moins de ressources système, permettant ainsi une meilleure utilisation des serveurs.
+
+4. **Scalabilité** : Les conteneurs peuvent être facilement répliqués et mis à l'échelle pour répondre à la demande croissante, ce qui est particulièrement utile dans les environnements de microservices.
+
+5. **Développement et déploiement continus** : Les conteneurs facilitent l'intégration continue et le déploiement continu (CI/CD), permettant aux équipes de développement de déployer des mises à jour plus fréquemment et avec moins de risques.
+
 ## Comparaison avec d'autres méthodes de déploiement
 
 Pour mieux comprendre les avantages des conteneurs, voici une comparaison avec d'autres méthodes de déploiement :
@@ -171,6 +191,24 @@ graph TD
     I --> L[Isolation des processus]
     I --> M[Partage du noyau OS]
 ```
+
+### Déploiement traditionnel
+
+- **Installation manuelle** : Chaque serveur nécessite une installation et une configuration manuelle, ce qui est sujet aux erreurs et chronophage.
+- **Dépendances spécifiques à l'OS** : Les applications peuvent avoir des dépendances spécifiques à un système d'exploitation, rendant le déploiement sur différents environnements complexe.
+
+### Machines virtuelles
+
+- **Image complète de l'OS** : Chaque machine virtuelle inclut une copie complète du système d'exploitation, ce qui entraîne une utilisation inefficace des ressources.
+- **Ressources importantes** : Les machines virtuelles consomment plus de CPU et de mémoire par rapport aux conteneurs.
+- **Démarrage lent** : Le démarrage d'une machine virtuelle prend plus de temps en raison de la nécessité de charger un système d'exploitation complet.
+
+### Conteneurs Docker
+
+- **Léger et portable** : Les conteneurs sont légers car ils partagent le noyau du système d'exploitation hôte et peuvent être facilement déplacés entre différents environnements.
+- **Démarrage rapide** : Les conteneurs démarrent en quelques secondes, ce qui permet un déploiement rapide des applications.
+- **Isolation des processus** : Chaque conteneur fonctionne dans un environnement isolé, améliorant la sécurité et la stabilité.
+- **Partage du noyau OS** : En partageant le noyau du système d'exploitation, les conteneurs utilisent moins de ressources système.
 
 ## Troubleshooting
 
